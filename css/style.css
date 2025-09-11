@@ -347,16 +347,15 @@ section.research .name span {
 }
 
 
+
+
 .research-banner {
-    background-image: url('../images/blackhole-banner.jpg'); /* Adjust path as needed */
+    background-image: url('../images/blackhole-banner.jpg'); /* ✅ Adjust the path */
     background-size: cover;
     background-position: center;
     height: 70vh;
     color: white;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 2rem;
 }
 
@@ -367,29 +366,35 @@ section.research .name span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.55); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.4); /* ✅ Lightened overlay from 0.55 to 0.4 */
     z-index: 1;
 }
 
 .quote-text {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .quote-text h1 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* ✅ Increased font size */
     font-weight: 600;
     line-height: 1.6;
+    color: #ffffff; /* ✅ Ensure full white text */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* ✅ Add shadow for readability */
 }
 
 .quote-text .author {
-    margin-top: 1rem;
-    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
     font-style: italic;
-    opacity: 0.9;
+    color: #f0f0f0;
 }
+
+
+
 
 
 
