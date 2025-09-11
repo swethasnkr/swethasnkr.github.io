@@ -624,7 +624,7 @@ section.broader-impacts {
 }
 
 section.broader-impacts h1 {
-    color: var(--secondary-color);
+    color: #333333;
     font-weight: 700;
     font-size: 30px;
     margin: 2rem 0;
@@ -632,7 +632,7 @@ section.broader-impacts h1 {
 
 .outreach-card img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Makes the image perfectly square */
+    aspect-ratio: 1 / 1.1; /* Makes the image perfectly square */
     object-fit: cover;
     border-radius: 8px; /* Optional: round the corners */
 }
