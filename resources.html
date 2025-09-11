@@ -20,13 +20,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #e6f2ff; /* Light blue background */
             color: #333;
-        }
-
-        .container {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
         }
 
         h1 {
@@ -39,12 +34,20 @@
 
         .accordion-button {
             font-weight: 600;
-            background-color: #fff;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
         }
 
         .accordion-button:not(.collapsed) {
-            background-color: #eaeaea;
+            background-color: transparent;
             color: #000;
+        }
+
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background-color: transparent;
         }
 
         .accordion-body ul {
@@ -63,137 +66,163 @@
         .accordion-body a:hover {
             text-decoration: underline;
         }
+
+        .resources-section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .resource-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .resource-image {
+                margin-bottom: 2rem;
+                height: 250px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>Helpful Resources</h1>
-
-        <div class="accordion" id="resourcesAccordion">
-
-            <!-- Research -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingResearch">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseResearch" aria-expanded="true" aria-controls="collapseResearch">
-                        Research
-                    </button>
-                </h2>
-                <div id="collapseResearch" class="accordion-collapse collapse show" aria-labelledby="headingResearch"
-                    data-bs-parent="#resourcesAccordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>
-                                <a href="https://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/" target="_blank">
-                                    International Conferences – Canadian Astronomy Data Centre
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="container resources-section">
+        <div class="row">
+            <!-- Left: Image -->
+            <div class="col-md-6 d-none d-md-block">
+                <img src="images/galaxy.jpg" alt="Galaxy or relevant resource image" class="resource-image">
             </div>
 
-            <!-- Grants -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingGrants">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseGrants" aria-expanded="false" aria-controls="collapseGrants">
-                        Grants
-                    </button>
-                </h2>
-                <div id="collapseGrants" class="accordion-collapse collapse" aria-labelledby="headingGrants"
-                    data-bs-parent="#resourcesAccordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>
-                                <a href="https://science.nasa.gov/researchers/solicitations/roses-2024/amendment-63-finesst-smds-graduate-student-research-final-text-and-due-date-released/"
-                                    target="_blank">NASA FINESST</a>
-                            </li>
-                            <li>
-                                <a href="https://www.research.gov/grfp/Login.do" target="_blank">NSF GRFP</a>
-                            </li>
-                            <li>
-                                <a href="https://www.alexhunterlang.com/nsf-fellowship" target="_blank">Alex Lang’s Website for NSF GRFP Tips/Tricks</a>
-                            </li>
-                            <li>
-                                <a href="https://aas.org/honors-grants-and-prizes" target="_blank">AAS Grants</a>
-                            </li>
-                            <li>
-                                <a href="https://nspires.nasaprs.com/external/" target="_blank">Other NASA NSPIRES Opportunities</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <!-- Right: Content -->
+            <div class="col-md-6">
+                <h1>Helpful Resources</h1>
 
-            <!-- Inclusive Advising / Mentoring -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingMentoring">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseMentoring" aria-expanded="false" aria-controls="collapseMentoring">
-                        Inclusive Advising / Mentoring
-                    </button>
-                </h2>
-                <div id="collapseMentoring" class="accordion-collapse collapse" aria-labelledby="headingMentoring"
-                    data-bs-parent="#resourcesAccordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>
-                                <a href="https://sites.google.com/view/tamumagic" target="_blank">TAMU MAGIC (Texas A&M)</a>
-                            </li>
-                            <li>
-                                <a href="https://uci-pace.github.io/" target="_blank">PACE (UC Irvine)</a>
-                            </li>
-                            <li>
-                                <a href="https://graduateschool.brown.edu/sites/default/files/pdfs/Case%20Studies%20For%20Mentoring%2010-20-2017.pdf"
-                                    target="_blank">Advising Case Studies (Brown University)</a>
-                            </li>
-                            <li>
-                                <a href="https://penguin-mentoring.github.io" target="_blank">PENGUIN Mentoring Program</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                <div class="accordion" id="resourcesAccordion">
 
+                    <!-- Research -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingResearch">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseResearch" aria-expanded="true"
+                                aria-controls="collapseResearch">
+                                Research
+                            </button>
+                        </h2>
+                        <div id="collapseResearch" class="accordion-collapse collapse show"
+                            aria-labelledby="headingResearch" data-bs-parent="#resourcesAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/"
+                                            target="_blank">
+                                            International Conferences – Canadian Astronomy Data Centre
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grants -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingGrants">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseGrants" aria-expanded="false" aria-controls="collapseGrants">
+                                Grants
+                            </button>
+                        </h2>
+                        <div id="collapseGrants" class="accordion-collapse collapse" aria-labelledby="headingGrants"
+                            data-bs-parent="#resourcesAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a href="https://science.nasa.gov/researchers/solicitations/roses-2024/amendment-63-finesst-smds-graduate-student-research-final-text-and-due-date-released/"
+                                            target="_blank">NASA FINESST</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.research.gov/grfp/Login.do" target="_blank">NSF GRFP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.alexhunterlang.com/nsf-fellowship" target="_blank">Alex Lang’s Website for NSF GRFP Tips/Tricks</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://aas.org/honors-grants-and-prizes" target="_blank">AAS Grants</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://nspires.nasaprs.com/external/" target="_blank">Other NASA NSPIRES Opportunities</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusive Advising / Mentoring -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingMentoring">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseMentoring" aria-expanded="false"
+                                aria-controls="collapseMentoring">
+                                Inclusive Advising / Mentoring
+                            </button>
+                        </h2>
+                        <div id="collapseMentoring" class="accordion-collapse collapse"
+                            aria-labelledby="headingMentoring" data-bs-parent="#resourcesAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a href="https://sites.google.com/view/tamumagic" target="_blank">TAMU MAGIC (Texas A&M)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://uci-pace.github.io/" target="_blank">PACE (UC Irvine)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://graduateschool.brown.edu/sites/default/files/pdfs/Case%20Studies%20For%20Mentoring%2010-20-2017.pdf"
+                                            target="_blank">Advising Case Studies (Brown University)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://penguin-mentoring.github.io" target="_blank">PENGUIN Mentoring Program</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- End Right Column -->
         </div>
     </div>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!---------------START contact---------------->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="freelance">
-                        <h2>Have questions? Feel free to <span>Email</span> Me
-                        </h2>
-
+                    <div class="freelance text-center">
+                        <h2>Have questions? Feel free to <span>Email</span> Me</h2>
                         <a target="_blank" href="mailto:ssanka10@jh.edu" class="contact-btn">ssanka10@jh.edu</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!---------------END contact---------------->
 
-
-
-
+    <!-- Footer -->
     <div class="tagline">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h6>Swetha Sankar © 2025. All Right Reserved</h6>
+                    <h6>Swetha Sankar © 2025. All Rights Reserved</h6>
                 </div>
                 <div class="col-lg-6 text-end">
                     <div class="social-icons">
                         <a target="_blank" href="mailto:ssanka10@jh.edu"><i class="fa fa-envelope"></i></a>
-                        
                         <a target="_blank" href="https://github.com/swethasnkr"><i class="fa fa-github"></i></a>
                     </div>
                 </div>
@@ -204,3 +233,4 @@
 </body>
 
 </html>
+
