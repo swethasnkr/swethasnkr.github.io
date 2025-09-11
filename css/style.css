@@ -346,6 +346,53 @@ section.research .name span {
     color: var(--secondary-color);
 }
 
+
+.research-banner {
+    background-image: url('../images/blackhole-banner.jpg'); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.research-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.quote-text {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quote-text h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.quote-text .author {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+
+
 section.research .research-box {
     margin-bottom: 30px;
     -webkit-transition: .5s;
