@@ -618,8 +618,6 @@ section.publications ol li a:hover {
 
 
 
-
-
 section.broader-impacts {
     padding: 5rem 0;
     background-color: #f9f9f9; /* light gray background */
@@ -634,10 +632,11 @@ section.broader-impacts h1 {
 
 .outreach-card img {
     width: 100%;
-    height: 250px; /* Forces square-like appearance for most common screen sizes */
+    aspect-ratio: 1 / 1; /* Makes the image perfectly square */
     object-fit: cover;
-    border-radius: 8px; /* Optional: round the corners slightly */
+    border-radius: 8px; /* Optional: round the corners */
 }
+
 
 
 
