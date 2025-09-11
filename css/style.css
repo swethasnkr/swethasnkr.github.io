@@ -394,6 +394,45 @@ section.research .name span {
 }
 
 
+.resources-page {
+    background-color: #a4b2ba;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Accordion inside resources only */
+.resources-page .accordion-item {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.resources-page .accordion-button {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    font-weight: 600;
+    color: #000;
+}
+
+.resources-page .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+}
+
+.resources-page .accordion-body {
+    color: #000;
+}
+
+.resources-page .accordion-body a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.resources-page .accordion-body a:hover {
+    text-decoration: underline;
+}
+
 
 
 
