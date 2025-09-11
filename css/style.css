@@ -619,8 +619,10 @@ section.publications ol li a:hover {
 
 
 
+
 section.broader-impacts {
     padding: 5rem 0;
+    background-color: #f9f9f9; /* light gray background */
 }
 
 section.broader-impacts h1 {
@@ -628,6 +630,13 @@ section.broader-impacts h1 {
     font-weight: 700;
     font-size: 30px;
     margin: 2rem 0;
+}
+
+.outreach-card img {
+    width: 100%;
+    height: 250px; /* Forces square-like appearance for most common screen sizes */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: round the corners slightly */
 }
 
 
