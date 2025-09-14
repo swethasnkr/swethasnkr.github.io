@@ -93,6 +93,7 @@ ul {
     color: #333;
     text-decoration: none;
     animation: bounce 2s infinite;
+    font-weight: bold;
 }
 
 .scroll-down i {
