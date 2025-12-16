@@ -392,6 +392,16 @@ section.research .name span {
     padding: 2rem;
 }
 
+.blog-banner {
+    background-image: url('../images/blog-bg.jpg'); /* ✅ Adjust the path */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    position: relative;
+    padding: 2rem;
+}
+
 .research-banner::before {
     content: "";
     position: absolute;
