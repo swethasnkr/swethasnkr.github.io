@@ -491,7 +491,8 @@ section.research .name span {
 }
 
 .blog-box .title {
-    color: #0077cc; /* Optional: darker blue for the title */
+    color: #000000; /* Optional: darker blue for the title */
+    margin-bottom: 15px; /* Space below the title */
 }
 
 .blog-box .details p {
