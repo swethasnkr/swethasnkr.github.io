@@ -477,7 +477,26 @@ section.research .name span {
 }
 
 
+/* Light blue blog box */
+.blog-box {
+    background-color: #a4b2ba;  /* Light blue */
+    border-radius: 8px;          /* Rounded corners */
+    padding: 15px;               /* Inner spacing */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
 
+.blog-box:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Subtle shadow */
+}
+
+.blog-box .title {
+    color: #0077cc; /* Optional: darker blue for the title */
+}
+
+.blog-box .details p {
+    color: #000000; /* Black text for readability */
+}
 
 
 section.research .research-box {
