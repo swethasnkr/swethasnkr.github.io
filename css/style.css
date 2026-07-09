@@ -321,6 +321,154 @@ html {
     }
 }
 
+/* ==============================
+   Why Time Matters Section
+   ============================== */
+
+.why-time-section {
+    background-color: #ffffff;
+    color: #111111;
+    padding: 90px 0;
+}
+
+.why-time-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.section-title-line span {
+    flex: 1;
+    height: 1px;
+    background-color: #111111;
+    max-width: 180px;
+}
+
+.section-title-line h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.why-time-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-time-content p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 1.8rem;
+    color: #222222;
+}
+
+.text-image-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.why-time-text {
+    flex: 1;
+}
+
+.why-time-image-wrap {
+    flex: 0 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-time-image {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid #d7e6f2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.research-questions {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    border-left: 5px solid #2f6f9f;
+    background-color: #eef6fb;
+    border-radius: 8px;
+}
+
+.research-questions .questions-heading {
+    font-weight: 700;
+    color: #2f6f9f;
+    font-size: 19px;
+    margin-bottom: 1.2rem;
+}
+
+.research-questions ol {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.research-questions li {
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    color: #111111;
+}
+
+.research-questions li:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .text-image-row,
+    .text-image-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-image-row.reverse .why-time-image-wrap {
+        order: 2;
+    }
+
+    .text-image-row.reverse .why-time-text {
+        order: 1;
+    }
+
+    .why-time-image {
+        width: 190px;
+        height: 190px;
+    }
+
+    .section-title-line {
+        gap: 1rem;
+    }
+
+    .section-title-line h2 {
+        font-size: 24px;
+    }
+
+    .section-title-line span {
+        max-width: 70px;
+    }
+
+    .why-time-content p,
+    .research-questions li {
+        font-size: 16px;
+    }
+}
 
 
 
