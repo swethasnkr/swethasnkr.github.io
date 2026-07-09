@@ -130,23 +130,23 @@ html {
     background-attachment: fixed;
     display: flex;
     align-items: center;
-    z-index: 0;
     position: relative;
+    overflow: hidden;
     padding: 120px 0 90px;
 }
 
-.banner::before {
-    content: " ";
+/* Transparent screen over background image */
+.banner-overlay {
     position: absolute;
     inset: 0;
-    background-color: var(--primary-color);
-    z-index: -1;
-    opacity: 0.68;
+    background-color: rgba(25, 25, 35, 0.68);
+    z-index: 1;
 }
 
-/* Two-column home layout */
-.banner .banner-caption {
-    width: 100%;
+/* Keep text/content above overlay */
+.banner .container {
+    position: relative;
+    z-index: 2;
 }
 
 .banner-content {
@@ -157,6 +157,7 @@ html {
     width: 100%;
 }
 
+/* Left column */
 .banner-profile {
     flex: 0 0 35%;
     text-align: center;
@@ -195,6 +196,7 @@ html {
     margin-bottom: 1.2rem;
 }
 
+/* Right column */
 .banner-text {
     flex: 0 0 58%;
     color: var(--theme-white-color);
@@ -212,7 +214,7 @@ html {
     color: var(--theme-main-color);
 }
 
-/* Social icons in left column */
+/* Social icons */
 .banner-social-icons {
     margin-top: 1.5rem;
     display: flex;
@@ -266,6 +268,16 @@ html {
     background-color: var(--primary-color);
 }
 
+/* Scroll down should also sit above overlay */
+.scroll-down {
+    z-index: 2;
+    color: var(--theme-white-color);
+}
+
+.scroll-down i {
+    color: var(--theme-white-color);
+}
+
 /* Mobile */
 @media screen and (max-width: 991px) {
     .banner {
@@ -308,7 +320,6 @@ html {
         font-size: 14px;
     }
 }
-
 
 
 
