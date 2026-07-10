@@ -1106,6 +1106,160 @@ section.research .content-text {
 
 }
 
+/* =========================================================
+   AWARDS AND OBSERVING PROGRAMS
+   ========================================================= */
+
+.awards-programs-section {
+  width: 100%;
+  padding: 70px 0 85px;
+  background: #ffffff;
+  color: #172033;
+}
+
+.awards-programs-section .container {
+  width: min(92%, 1500px);
+  margin: 0 auto;
+}
+
+/* Title with horizontal lines */
+.awards-programs-section .section-title-line {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) auto minmax(80px, 1fr);
+  align-items: center;
+  gap: 42px;
+  margin-bottom: 68px;
+}
+
+.awards-programs-section .section-title-line span {
+  display: block;
+  height: 4px;
+  background: #d3d3d3;
+  border-radius: 10px;
+}
+
+.awards-programs-section .section-title-line h2 {
+  margin: 0;
+  color: #172033;
+  font-size: clamp(2rem, 2.8vw, 3.1rem);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+/* Two-column layout */
+.awards-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(70px, 10vw, 180px);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.awards-programs-column h3 {
+  margin: 0 0 34px;
+  color: #172033;
+  font-size: clamp(1.5rem, 1.8vw, 2rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Individual entries */
+.award-item,
+.program-item {
+  margin-bottom: 30px;
+}
+
+.award-item:last-child,
+.program-item:last-child {
+  margin-bottom: 0;
+}
+
+.award-title,
+.program-title {
+  margin: 0 0 4px;
+  color: #374257;
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.015em;
+}
+
+.award-meta,
+.program-meta {
+  margin: 0 0 5px;
+  color: #697286;
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.award-description,
+.program-description {
+  margin: 0;
+  color: #596477;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Optional alignment similar to the reference */
+.observing-programs-column {
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .awards-programs-section {
+    padding: 58px 0 68px;
+  }
+
+  .awards-programs-section .section-title-line {
+    gap: 22px;
+    margin-bottom: 48px;
+  }
+
+  .awards-programs-grid {
+    gap: 55px;
+  }
+
+  .observing-programs-column {
+    text-align: left;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .awards-programs-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .awards-programs-section .section-title-line {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .awards-programs-section .section-title-line span {
+    display: none;
+  }
+
+  .awards-programs-section .section-title-line h2 {
+    text-align: left;
+  }
+
+  .awards-programs-column h3 {
+    margin-bottom: 28px;
+  }
+}
+
 .contact {
     padding: 3em 0;
     text-align: center;
