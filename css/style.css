@@ -399,7 +399,7 @@ html {
 
 .feedback-image {
     width: 100%;
-    max-width: 430px;
+    max-width: 500px;
     border-radius: 18px;
     object-fit: cover;
     border: 4px solid #d7e6f2;
