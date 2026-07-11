@@ -1879,3 +1879,21 @@ body {
         min-height: calc(100vh - 132px);
     }
 }
+
+.research-banner {
+  position: relative;
+  min-height: 520px;
+
+  background-image:
+    linear-gradient(
+      rgba(5, 9, 17, 0.45),
+      rgba(5, 9, 17, 0.75)
+    ),
+    url("../images/blackhole-banner.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
