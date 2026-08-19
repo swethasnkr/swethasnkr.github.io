@@ -59,370 +59,377 @@
 
 
         /* ==================================================
-           BLOG INTRO
-        ================================================== */
+   BLOG INTRO
+================================================== */
 
-        .blog-intro {
-            max-width: 1180px;
-            margin: 0 auto;
+.blog-intro {
+    max-width: 1180px;
+    margin: 0 auto;
 
-            padding: 125px 30px 125px;
-        }
+    /* tighter spacing from the top navigation/banner */
+    padding: 65px 30px 95px;
+}
 
 
-        .blog-label {
-            margin-bottom: 24px;
+.blog-label {
+    margin-bottom: 20px;
 
-            font-size: 0.72rem;
-            font-weight: 500;
+    font-size: 0.72rem;
+    font-weight: 500;
 
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
 
-            color: var(--blog-muted);
-        }
+    color: var(--blog-muted);
+}
 
 
-        .blog-intro h1 {
-            max-width: 1050px;
-            margin: 0;
+.blog-intro h1 {
+    max-width: 1050px;
+    margin: 0;
 
-            font-size: clamp(3.6rem, 7vw, 7rem);
-            font-weight: 500;
+    font-size: clamp(3.6rem, 7vw, 7rem);
+    font-weight: 500;
 
-            line-height: 0.98;
-            letter-spacing: -0.05em;
+    line-height: 0.98;
+    letter-spacing: -0.05em;
 
-            color: var(--blog-text);
-        }
+    color: var(--blog-text);
+}
 
 
-        .blog-intro .indent {
-            display: inline-block;
-            margin-left: 11%;
-        }
+.blog-intro .indent {
+    display: inline-block;
+    margin-left: 11%;
+}
 
 
-        .blog-intro p {
-            max-width: 500px;
+.blog-intro p {
+    max-width: 500px;
 
-            margin: 42px 0 0 auto;
+    /* slightly tighter beneath the title */
+    margin: 32px 0 0 auto;
 
-            font-size: 0.91rem;
-            font-weight: 300;
+    font-size: 0.91rem;
+    font-weight: 300;
 
-            line-height: 1.9;
+    line-height: 1.9;
 
-            color: var(--blog-muted);
-        }
+    color: var(--blog-muted);
+}
 
 
 
-        /* ==================================================
-           BLOG GALLERY
-        ================================================== */
+/* ==================================================
+   BLOG GALLERY
+================================================== */
 
-        .blog-gallery {
-            max-width: 1300px;
+.blog-gallery {
+    max-width: 1250px;
 
-            margin: 0 auto;
-            padding: 0 30px 160px;
-        }
+    margin: 0 auto;
+    padding: 0 30px 130px;
+}
 
 
-        .blog-post {
-            position: relative;
-        }
+.blog-post {
+    position: relative;
+}
 
 
-        .blog-post a {
-            display: block;
+.blog-post a {
+    display: block;
 
-            color: inherit;
-            text-decoration: none;
-        }
+    color: inherit;
+    text-decoration: none;
+}
 
 
 
-        /* ==================================================
-           IMAGES
-        ================================================== */
+/* ==================================================
+   IMAGES
+================================================== */
 
-        .post-image {
-            position: relative;
+.post-image {
+    position: relative;
 
-            overflow: hidden;
+    overflow: hidden;
 
-            background: #f4f4f4;
-        }
+    background: #f4f4f4;
+}
 
 
-        .post-image img {
-            display: block;
+.post-image img {
+    display: block;
 
-            width: 100%;
-            height: 100%;
+    width: 100%;
+    height: 100%;
 
-            object-fit: cover;
+    object-fit: cover;
 
-            transition:
-                transform 0.8s cubic-bezier(.2, .7, .2, 1),
-                filter 0.45s ease;
-        }
+    transition:
+        transform 0.8s cubic-bezier(.2, .7, .2, 1),
+        filter 0.45s ease;
+}
 
 
-        .blog-post:hover .post-image img {
-            transform: scale(1.035);
-        }
+.blog-post:hover .post-image img {
+    transform: scale(1.035);
+}
 
 
 
-        /* ==================================================
-           POST TEXT
-        ================================================== */
+/* ==================================================
+   POST TEXT
+================================================== */
 
-        .post-info {
-            margin-top: 22px;
-        }
+.post-info {
+    margin-top: 18px;
+}
 
 
-        .post-meta {
-            margin-bottom: 11px;
+.post-meta {
+    margin-bottom: 9px;
 
-            font-size: 0.66rem;
-            font-weight: 500;
+    font-size: 0.66rem;
+    font-weight: 500;
 
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
 
-            color: var(--blog-muted);
-        }
+    color: var(--blog-muted);
+}
 
 
-        .post-title {
-            max-width: 820px;
+.post-title {
+    max-width: 760px;
 
-            margin: 0;
+    margin: 0;
 
-            font-size: clamp(2rem, 3.7vw, 3.9rem);
-            font-weight: 500;
+    /* slightly smaller to match the smaller cards */
+    font-size: clamp(1.8rem, 3.2vw, 3.35rem);
+    font-weight: 500;
 
-            line-height: 1.04;
-            letter-spacing: -0.04em;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
 
-            transition: transform 0.3s ease;
-        }
+    transition: transform 0.3s ease;
+}
 
 
-        .blog-post:hover .post-title {
-            transform: translateX(7px);
-        }
+.blog-post:hover .post-title {
+    transform: translateX(7px);
+}
 
 
-        .post-description {
-            max-width: 560px;
+.post-description {
+    max-width: 520px;
 
-            margin-top: 18px;
+    margin-top: 14px;
 
-            font-size: 0.88rem;
-            font-weight: 300;
+    font-size: 0.86rem;
+    font-weight: 300;
 
-            line-height: 1.8;
+    line-height: 1.8;
 
-            color: var(--blog-muted);
-        }
+    color: var(--blog-muted);
+}
 
 
-        .post-arrow {
-            display: inline-block;
+.post-arrow {
+    display: inline-block;
 
-            margin-left: 8px;
+    margin-left: 8px;
 
-            transition: transform 0.25s ease;
-        }
+    transition: transform 0.25s ease;
+}
 
 
-        .blog-post:hover .post-arrow {
-            transform: translate(5px, -5px);
-        }
+.blog-post:hover .post-arrow {
+    transform: translate(5px, -5px);
+}
 
 
 
-        /* ==================================================
-           POST 1
-           Big, left aligned
-        ================================================== */
+/* ==================================================
+   POST 1
+   Large, but more compact
+================================================== */
 
-        .post-one {
-            width: 82%;
+.post-one {
+    width: 72%;
 
-            margin-bottom: 165px;
-        }
+    margin-bottom: 125px;
+}
 
 
-        .post-one .post-image {
-            aspect-ratio: 16 / 10;
-        }
+.post-one .post-image {
+    /* shorter than before */
+    aspect-ratio: 16 / 9;
+}
 
 
 
-        /* ==================================================
-           POST 2
-           Smaller and offset right
-        ================================================== */
+/* ==================================================
+   POST 2
+   Smaller and offset right
+================================================== */
 
-        .post-two {
-            width: 53%;
+.post-two {
+    width: 46%;
 
-            margin-left: auto;
-            margin-right: 5%;
-        }
+    margin-left: auto;
+    margin-right: 8%;
+}
 
 
-        .post-two .post-image {
-            aspect-ratio: 4 / 5;
-        }
+.post-two .post-image {
+    aspect-ratio: 4 / 5;
+}
 
 
 
-        /* ==================================================
-           IMAGE HOVER LABEL
-        ================================================== */
+/* ==================================================
+   IMAGE HOVER LABEL
+================================================== */
 
-        .open-label {
-            position: absolute;
+.open-label {
+    position: absolute;
 
-            right: 18px;
-            bottom: 18px;
+    right: 16px;
+    bottom: 16px;
 
-            padding: 9px 13px;
+    padding: 8px 12px;
 
-            background: rgba(255,255,255,0.94);
+    background: rgba(255,255,255,0.94);
 
-            font-size: 0.62rem;
-            font-weight: 500;
+    font-size: 0.60rem;
+    font-weight: 500;
 
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 
-            opacity: 0;
+    opacity: 0;
 
-            transform: translateY(7px);
+    transform: translateY(7px);
 
-            transition:
-                opacity 0.3s ease,
-                transform 0.3s ease;
-        }
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
 
 
-        .blog-post:hover .open-label {
-            opacity: 1;
+.blog-post:hover .open-label {
+    opacity: 1;
 
-            transform: translateY(0);
-        }
+    transform: translateY(0);
+}
 
 
 
-        /* ==================================================
-           SCROLL REVEAL
-        ================================================== */
+/* ==================================================
+   SCROLL REVEAL
+================================================== */
 
-        .reveal {
-            opacity: 0;
+.reveal {
+    opacity: 0;
 
-            transform: translateY(25px);
+    transform: translateY(25px);
 
-            transition:
-                opacity 0.8s ease,
-                transform 0.8s ease;
-        }
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
 
 
-        .reveal.visible {
-            opacity: 1;
+.reveal.visible {
+    opacity: 1;
 
-            transform: translateY(0);
-        }
+    transform: translateY(0);
+}
 
 
 
-        /* ==================================================
-           VERY SUBTLE END
-        ================================================== */
+/* ==================================================
+   VERY SUBTLE END
+================================================== */
 
-        .blog-end {
-            max-width: 1180px;
+.blog-end {
+    max-width: 1180px;
 
-            margin: 155px auto 0;
-            padding-top: 22px;
+    margin: 125px auto 0;
+    padding-top: 22px;
 
-            border-top: 1px solid var(--blog-line);
+    border-top: 1px solid var(--blog-line);
 
-            font-size: 0.67rem;
-            font-weight: 400;
+    font-size: 0.67rem;
+    font-weight: 400;
 
-            letter-spacing: 0.13em;
-            text-transform: uppercase;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
 
-            color: var(--blog-muted);
-        }
+    color: var(--blog-muted);
+}
 
 
 
-        /* ==================================================
-           MOBILE
-        ================================================== */
+/* ==================================================
+   MOBILE
+================================================== */
 
-        @media (max-width: 850px) {
+@media (max-width: 850px) {
 
-            .blog-intro {
-                padding: 90px 20px 90px;
-            }
+    .blog-intro {
+        /* also tighter on mobile */
+        padding: 55px 20px 75px;
+    }
 
 
-            .blog-intro h1 {
-                font-size: clamp(3rem, 12vw, 5.5rem);
-            }
+    .blog-intro h1 {
+        font-size: clamp(3rem, 12vw, 5.5rem);
+    }
 
 
-            .blog-intro .indent {
-                margin-left: 0;
-            }
+    .blog-intro .indent {
+        margin-left: 0;
+    }
 
 
-            .blog-intro p {
-                margin-left: 0;
-            }
+    .blog-intro p {
+        margin-top: 28px;
+        margin-left: 0;
+    }
 
 
-            .blog-gallery {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
+    .blog-gallery {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 100px;
+    }
 
 
-            .post-one,
-            .post-two {
-                width: 100%;
+    .post-one,
+    .post-two {
+        width: 100%;
 
-                margin-left: 0;
-                margin-right: 0;
+        margin-left: 0;
+        margin-right: 0;
 
-                margin-bottom: 100px;
-            }
+        margin-bottom: 85px;
+    }
 
 
-            .post-one .post-image,
-            .post-two .post-image {
-                aspect-ratio: 16 / 11;
-            }
+    .post-one .post-image,
+    .post-two .post-image {
+        aspect-ratio: 16 / 11;
+    }
 
 
-            .post-title {
-                font-size: 2.35rem;
-            }
+    .post-title {
+        font-size: 2.2rem;
+    }
 
-        }
+}
 
     </style>
 
