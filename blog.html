@@ -2,15 +2,18 @@
 <html lang="en">
 
 <head>
+
     <title>The Eclectic Blog | Swetha Sankar</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
+
 
     <!-- Font Awesome -->
     <link
@@ -25,6 +28,7 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
 
+
     <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +36,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
 
     <!-- Your existing site CSS -->
     <link
@@ -52,396 +57,554 @@
 
         body {
             margin: 0;
+
             background: var(--blog-bg);
             color: var(--blog-text);
+
             font-family: "Poppins", sans-serif;
         }
 
 
+
         /* ==================================================
-   BLOG INTRO
-================================================== */
+           BLOG INTRO
+           Background image: snow_bottle.png
+        ================================================== */
 
-.blog-intro {
-    max-width: 1180px;
-    margin: 0 auto;
+        .blog-intro {
+            position: relative;
 
-    /* tighter spacing from the top navigation/banner */
-    padding: 65px 30px 95px;
-}
+            width: 100%;
+            min-height: 430px;
 
+            margin: 0;
 
-.blog-label {
-    margin-bottom: 20px;
+            padding: 60px 7vw 65px;
 
-    font-size: 0.72rem;
-    font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.42),
+                    rgba(255,255,255,0.42)
+                ),
+                url("images/snow_bottle.png");
 
-    color: var(--blog-muted);
-}
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
 
+            overflow: hidden;
+        }
 
-.blog-intro h1 {
-    max-width: 1050px;
-    margin: 0;
 
-    font-size: clamp(3.6rem, 7vw, 7rem);
-    font-weight: 500;
+        .blog-intro::after {
+            content: "";
 
-    line-height: 0.98;
-    letter-spacing: -0.05em;
+            position: absolute;
+            inset: 0;
 
-    color: var(--blog-text);
-}
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.30) 0%,
+                    rgba(255,255,255,0.10) 55%,
+                    rgba(255,255,255,0.16) 100%
+                );
 
+            pointer-events: none;
+        }
 
-.blog-intro .indent {
-    display: inline-block;
-    margin-left: 11%;
-}
 
+        .blog-label,
+        .blog-intro h1 {
+            position: relative;
+            z-index: 1;
+        }
 
-.blog-intro p {
-    max-width: 500px;
 
-    /* slightly tighter beneath the title */
-    margin: 32px 0 0 auto;
+        .blog-label {
+            margin-bottom: 18px;
 
-    font-size: 0.91rem;
-    font-weight: 300;
+            font-size: 0.72rem;
+            font-weight: 500;
 
-    line-height: 1.9;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
 
-    color: var(--blog-muted);
-}
+            color: #444;
+        }
 
 
+        .blog-intro h1 {
+            max-width: 1050px;
+            margin: 0;
 
-/* ==================================================
-   BLOG GALLERY
-================================================== */
+            font-size: clamp(3.3rem, 6.4vw, 6.5rem);
+            font-weight: 500;
 
-.blog-gallery {
-    max-width: 1250px;
+            line-height: 0.98;
+            letter-spacing: -0.05em;
 
-    margin: 0 auto;
-    padding: 0 30px 130px;
-}
+            color: #171717;
+        }
 
 
-.blog-post {
-    position: relative;
-}
+        .blog-intro .indent {
+            display: inline-block;
+            margin-left: 11%;
+        }
 
 
-.blog-post a {
-    display: block;
 
-    color: inherit;
-    text-decoration: none;
-}
+        /* ==================================================
+           BLOG GALLERY
+        ================================================== */
 
+        .blog-gallery {
+            max-width: 1250px;
 
+            margin: 0 auto;
+            padding: 80px 30px 120px;
+        }
 
-/* ==================================================
-   IMAGES
-================================================== */
 
-.post-image {
-    position: relative;
+        .blog-post {
+            position: relative;
+        }
 
-    overflow: hidden;
 
-    background: #f4f4f4;
-}
+        .blog-post a {
+            display: block;
 
+            color: inherit;
+            text-decoration: none;
+        }
 
-.post-image img {
-    display: block;
 
-    width: 100%;
-    height: 100%;
 
-    object-fit: cover;
+        /* ==================================================
+           BLOG IMAGES
+        ================================================== */
 
-    transition:
-        transform 0.8s cubic-bezier(.2, .7, .2, 1),
-        filter 0.45s ease;
-}
+        .post-image {
+            position: relative;
 
+            overflow: hidden;
 
-.blog-post:hover .post-image img {
-    transform: scale(1.035);
-}
+            background: #f4f4f4;
+        }
 
 
+        .post-image img {
+            display: block;
 
-/* ==================================================
-   POST TEXT
-================================================== */
+            width: 100%;
+            height: 100%;
 
-.post-info {
-    margin-top: 18px;
-}
+            object-fit: cover;
 
+            transition:
+                transform 0.8s cubic-bezier(.2, .7, .2, 1),
+                filter 0.45s ease;
+        }
 
-.post-meta {
-    margin-bottom: 9px;
 
-    font-size: 0.66rem;
-    font-weight: 500;
+        .blog-post:hover .post-image img {
+            transform: scale(1.035);
+        }
 
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
 
-    color: var(--blog-muted);
-}
 
+        /* ==================================================
+           BLOG POST TEXT
+        ================================================== */
 
-.post-title {
-    max-width: 760px;
+        .post-info {
+            margin-top: 18px;
+        }
 
-    margin: 0;
 
-    /* slightly smaller to match the smaller cards */
-    font-size: clamp(1.55rem, 2.5vw, 2.65rem);
-    font-weight: 500;
+        .post-meta {
+            margin-bottom: 9px;
 
-    line-height: 1.04;
-    letter-spacing: -0.04em;
+            font-size: 0.66rem;
+            font-weight: 500;
 
-    transition: transform 0.3s ease;
-}
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
 
+            color: var(--blog-muted);
+        }
 
-.blog-post:hover .post-title {
-    transform: translateX(7px);
-}
 
+        .post-title {
+            max-width: 760px;
 
-.post-description {
-    max-width: 520px;
+            margin: 0;
 
-    margin-top: 14px;
+            font-size: clamp(1.55rem, 2.5vw, 2.65rem);
+            font-weight: 500;
 
-    font-size: 0.86rem;
-    font-weight: 300;
+            line-height: 1.04;
+            letter-spacing: -0.04em;
 
-    line-height: 1.8;
+            transition: transform 0.3s ease;
+        }
 
-    color: var(--blog-muted);
-}
 
+        .blog-post:hover .post-title {
+            transform: translateX(7px);
+        }
 
-.post-arrow {
-    display: inline-block;
 
-    margin-left: 8px;
+        .post-description {
+            max-width: 520px;
 
-    transition: transform 0.25s ease;
-}
+            margin-top: 14px;
 
+            font-size: 0.86rem;
+            font-weight: 300;
 
-.blog-post:hover .post-arrow {
-    transform: translate(5px, -5px);
-}
+            line-height: 1.8;
 
+            color: var(--blog-muted);
+        }
 
 
-/* ==================================================
-   POST 1
-   Large, but more compact
-================================================== */
+        .post-arrow {
+            display: inline-block;
 
-.post-one {
-    width: 62%;
-    margin-bottom: 70px;
-}
+            margin-left: 8px;
 
-.post-one .post-image {
-    aspect-ratio: 16 / 9;
-}
+            transition: transform 0.25s ease;
+        }
 
 
-/* ==================================================
-   POST 2
-   Smaller and offset right
-================================================== */
+        .blog-post:hover .post-arrow {
+            transform: translate(5px, -5px);
+        }
 
-.post-two {
-    width: 40%;
-    margin-left: auto;
-    margin-right: 10%;
-    margin-bottom: 70px;
-}
 
-.post-two .post-image {
-    aspect-ratio: 4 / 5;
-}
 
+        /* ==================================================
+           POST 1
+        ================================================== */
 
-/* ==================================================
-   POST 3
-   medium and offset left
-================================================== */
+        .post-one {
+            width: 62%;
 
+            margin-bottom: 55px;
+        }
 
-.post-three {
-    width: 50%;
-    margin-left: 8%;
-    margin-top: 0;
-    margin-bottom: 70px;
-}
 
-.post-three .post-image {
-    aspect-ratio: 5 / 4;
-}
+        .post-one .post-image {
+            aspect-ratio: 16 / 9;
+        }
 
 
-/* ==================================================
-   IMAGE HOVER LABEL
-================================================== */
 
-.open-label {
-    position: absolute;
+        /* ==================================================
+           POST 2
+        ================================================== */
 
-    right: 16px;
-    bottom: 16px;
+        .post-two {
+            width: 40%;
 
-    padding: 8px 12px;
+            margin-left: auto;
+            margin-right: 10%;
 
-    background: rgba(255,255,255,0.94);
+            margin-bottom: 55px;
+        }
 
-    font-size: 0.60rem;
-    font-weight: 500;
 
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+        .post-two .post-image {
+            aspect-ratio: 4 / 5;
+        }
 
-    opacity: 0;
 
-    transform: translateY(7px);
 
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
+        /* ==================================================
+           POST 3
+        ================================================== */
 
+        .post-three {
+            width: 50%;
 
-.blog-post:hover .open-label {
-    opacity: 1;
+            margin-left: 8%;
 
-    transform: translateY(0);
-}
+            margin-top: 0;
+            margin-bottom: 55px;
+        }
 
 
+        .post-three .post-image {
+            aspect-ratio: 5 / 4;
+        }
 
-/* ==================================================
-   SCROLL REVEAL
-================================================== */
 
-.reveal {
-    opacity: 0;
 
-    transform: translateY(25px);
+        /* ==================================================
+           IMAGE HOVER LABEL
+        ================================================== */
 
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
+        .open-label {
+            position: absolute;
 
+            right: 16px;
+            bottom: 16px;
 
-.reveal.visible {
-    opacity: 1;
+            padding: 8px 12px;
 
-    transform: translateY(0);
-}
+            background: rgba(255,255,255,0.94);
 
+            font-size: 0.60rem;
+            font-weight: 500;
 
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
 
-/* ==================================================
-   VERY SUBTLE END
-================================================== */
+            opacity: 0;
 
-.blog-end {
-    max-width: 1180px;
+            transform: translateY(7px);
 
-    margin: 70px auto 0;
-    padding-top: 22px;
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
+        }
 
-    border-top: 1px solid var(--blog-line);
 
-    font-size: 0.67rem;
-    font-weight: 400;
+        .blog-post:hover .open-label {
+            opacity: 1;
 
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
+            transform: translateY(0);
+        }
 
-    color: var(--blog-muted);
-}
 
 
+        /* ==================================================
+           RANDOM THOUGHTS
+        ================================================== */
 
-/* ==================================================
-   MOBILE
-================================================== */
+        .thought {
+            position: relative;
 
-@media (max-width: 850px) {
+            max-width: 850px;
 
-    .blog-intro {
-        /* also tighter on mobile */
-        padding: 55px 20px 75px;
-    }
+            margin: 75px auto 90px;
+            padding: 28px 20px;
 
+            text-align: center;
+        }
 
-    .blog-intro h1 {
-        font-size: clamp(3rem, 12vw, 5.5rem);
-    }
 
+        .thought p {
+            margin: 0;
 
-    .blog-intro .indent {
-        margin-left: 0;
-    }
+            font-size: clamp(1.55rem, 2.8vw, 2.7rem);
+            font-weight: 300;
 
+            line-height: 1.38;
+            letter-spacing: -0.025em;
 
-    .blog-intro p {
-        margin-top: 28px;
-        margin-left: 0;
-    }
+            color: #252525;
+        }
 
 
-    .blog-gallery {
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 30px 85px;
-}
+        .thought::before {
+            content: "";
 
+            display: block;
 
-    .post-one,
-    .post-two {
-        width: 100%;
+            width: 32px;
+            height: 1px;
 
-        margin-left: 0;
-        margin-right: 0;
+            margin: 0 auto 25px;
 
-        margin-bottom: 85px;
-    }
+            background: #aaa;
+        }
 
 
-    .post-one .post-image,
-    .post-two .post-image {
-        aspect-ratio: 16 / 11;
-    }
+        .thought-left {
+            max-width: 720px;
 
+            margin-left: 5%;
+            margin-right: auto;
 
-    .post-title {
-        font-size: 2.2rem;
-    }
+            text-align: left;
+        }
 
-}
+
+        .thought-left::before {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+
+        .thought-right {
+            max-width: 760px;
+
+            margin-left: auto;
+            margin-right: 6%;
+
+            text-align: right;
+        }
+
+
+        .thought-right::before {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+
+        .thought em {
+            font-style: italic;
+        }
+
+
+        .thought-note {
+            display: block;
+
+            margin-top: 18px;
+
+            font-size: 0.62rem;
+            font-weight: 500;
+
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+
+            color: var(--blog-muted);
+        }
+
+
+
+        /* ==================================================
+           SCROLL REVEAL
+        ================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+
+        /* ==================================================
+           END
+        ================================================== */
+
+        .blog-end {
+            max-width: 1180px;
+
+            margin: 80px auto 0;
+            padding-top: 22px;
+
+            border-top: 1px solid var(--blog-line);
+
+            font-size: 0.67rem;
+            font-weight: 400;
+
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+
+            color: var(--blog-muted);
+        }
+
+
+
+        /* ==================================================
+           MOBILE
+        ================================================== */
+
+        @media (max-width: 850px) {
+
+            .blog-intro {
+                min-height: 370px;
+
+                padding: 45px 20px 50px;
+
+                background-position: center;
+            }
+
+
+            .blog-intro h1 {
+                font-size: clamp(3rem, 12vw, 5.4rem);
+            }
+
+
+            .blog-intro .indent {
+                margin-left: 0;
+            }
+
+
+            .blog-gallery {
+                padding: 60px 20px 85px;
+            }
+
+
+            .post-one,
+            .post-two,
+            .post-three {
+                width: 100%;
+
+                margin-left: 0;
+                margin-right: 0;
+
+                margin-bottom: 65px;
+            }
+
+
+            .post-one .post-image,
+            .post-two .post-image,
+            .post-three .post-image {
+                aspect-ratio: 16 / 11;
+            }
+
+
+            .post-title {
+                font-size: 2.2rem;
+            }
+
+
+            .thought,
+            .thought-left,
+            .thought-right {
+                max-width: 100%;
+
+                margin: 55px 0 70px;
+                padding: 18px 0;
+
+                text-align: left;
+            }
+
+
+            .thought::before,
+            .thought-left::before,
+            .thought-right::before {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+
+            .thought p {
+                font-size: clamp(1.45rem, 6vw, 2.1rem);
+            }
+
+        }
 
     </style>
 
@@ -452,7 +615,7 @@
 
 
     <!-- ==================================================
-         SAME TOP NAVIGATION AS PERSONAL SITE
+         TOP NAVIGATION
     ================================================== -->
 
     <header class="top-nav">
@@ -536,14 +699,12 @@
 
         </h1>
 
-
-        
     </header>
 
 
 
     <!-- ==================================================
-         BLOG POSTS
+         BLOG CONTENT
     ================================================== -->
 
     <main class="blog-gallery">
@@ -570,7 +731,6 @@
                     </span>
 
                 </div>
-
 
 
                 <div class="post-info">
@@ -602,10 +762,25 @@
 
                 </div>
 
-
             </a>
 
         </article>
+
+
+
+        <!-- ==========================================
+             THOUGHT 1
+        =========================================== -->
+
+        <aside class="thought thought-right reveal">
+
+            <p>
+                “I feel both restless and listless and everything
+                in between — like something in me is vibrating
+                with nowhere to go.”
+            </p>
+
+        </aside>
 
 
 
@@ -630,7 +805,6 @@
                     </span>
 
                 </div>
-
 
 
                 <div class="post-info">
@@ -658,70 +832,114 @@
 
                 </div>
 
+            </a>
+
+        </article>
+
+
+
+        <!-- ==========================================
+             THOUGHT 2
+        =========================================== -->
+
+        <aside class="thought thought-left reveal">
+
+            <p>
+                “Sadness demands explanation.
+                Happiness simply asks to be lived.”
+            </p>
+
+        </aside>
+
+
+
+        <!-- ==========================================
+             POST 3
+        =========================================== -->
+
+        <article class="blog-post post-three reveal">
+
+            <a href="blog-color.html">
+
+
+                <div class="post-image">
+
+                    <img
+                        src="images/blog-color.png"
+                        alt="A 21st century girl's take on color">
+
+
+                    <span class="open-label">
+                        Open Essay ↗
+                    </span>
+
+                </div>
+
+
+                <div class="post-info">
+
+                    <div class="post-meta">
+                        Essay · Culture
+                    </div>
+
+
+                    <h2 class="post-title">
+
+                        A 21st century girl’s take on color
+
+                        <span class="post-arrow">
+                            ↗
+                        </span>
+
+                    </h2>
+
+
+                    <p class="post-description">
+                        The strange way color preference becomes powerful.
+                    </p>
+
+                </div>
 
             </a>
 
         </article>
 
-         <!-- ==========================================
-             POST 3
+
+
+        <!-- ==========================================
+             THOUGHT 3
         =========================================== -->
 
+        <aside class="thought thought-right reveal">
 
-        <article class="blog-post post-three reveal">
-
-    <a href="blog-color.html">
-
-        <div class="post-image">
-
-            <img
-                src="images/blog-color.png"
-                alt="A 21st century girl's take on color">
-
-            <span class="open-label">
-                Open Essay ↗
-            </span>
-
-        </div>
-
-        <div class="post-info">
-
-            <div class="post-meta">
-                Essay · Culture 
-            </div>
-
-            <h2 class="post-title">
-                A 21st century girl’s take on color
-                <span class="post-arrow">↗</span>
-            </h2>
-
-            <p class="post-description">
-                The strange way color preference becomes powerful. 
+            <p>
+                “<em>Mann vasanai.</em>
+                The richness of the soil; the connections
+                to my culture, tradition, ancestors.”
             </p>
 
-        </div>
+            <span class="thought-note">
+                A thought on belonging
+            </span>
 
-    </a>
-
-</article>
+        </aside>
 
 
 
         <!-- ==========================================
-             SMALL END MARKER
+             END
         =========================================== -->
 
         <div class="blog-end reveal">
             More to come.
         </div>
 
-
     </main>
 
 
 
     <!-- ==================================================
-         SAME CONTACT SECTION AS PERSONAL SITE
+         CONTACT
     ================================================== -->
 
     <section class="contact" id="contact">
@@ -762,7 +980,7 @@
 
 
     <!-- ==================================================
-         SAME FOOTER
+         FOOTER
     ================================================== -->
 
     <div class="tagline">
