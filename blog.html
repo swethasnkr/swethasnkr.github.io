@@ -38,7 +38,7 @@
         rel="stylesheet">
 
 
-    <!-- Your existing site CSS -->
+    <!-- Existing site CSS -->
     <link
         href="css/style.css"
         rel="stylesheet"
@@ -48,19 +48,24 @@
     <style>
 
         :root {
-            --blog-text: #222;
-            --blog-muted: #777;
+            --blog-text: #222222;
+            --blog-muted: #777777;
             --blog-line: #e2e2e2;
-            --blog-bg: #fff;
+            --blog-bg: #ffffff;
+
+            /* Lotus-inspired palette */
+            --lotus-green: #123c36;
+            --lotus-teal: #0b6e6d;
+            --lotus-mauve: #945e79;
+            --lotus-pink: #db7f9d;
+            --lotus-pale: #d7c1cc;
         }
 
 
         body {
             margin: 0;
-
             background: var(--blog-bg);
             color: var(--blog-text);
-
             font-family: "Poppins", sans-serif;
         }
 
@@ -68,18 +73,16 @@
 
         /* ==================================================
            BLOG INTRO
-           Background image: snow_bottle.png
         ================================================== */
 
         .blog-intro {
             position: relative;
 
             width: 100%;
-            min-height: 430px;
+            min-height: 420px;
 
             margin: 0;
-
-            padding: 60px 7vw 65px;
+            padding: 55px 7vw 60px;
 
             display: flex;
             flex-direction: column;
@@ -87,8 +90,8 @@
 
             background-image:
                 linear-gradient(
-                    rgba(255,255,255,0.42),
-                    rgba(255,255,255,0.42)
+                    rgba(255,255,255,0.38),
+                    rgba(255,255,255,0.38)
                 ),
                 url("images/snow_bottle.png");
 
@@ -110,8 +113,8 @@
                 linear-gradient(
                     90deg,
                     rgba(255,255,255,0.30) 0%,
-                    rgba(255,255,255,0.10) 55%,
-                    rgba(255,255,255,0.16) 100%
+                    rgba(255,255,255,0.08) 60%,
+                    rgba(255,255,255,0.15) 100%
                 );
 
             pointer-events: none;
@@ -134,7 +137,7 @@
             letter-spacing: 0.18em;
             text-transform: uppercase;
 
-            color: #444;
+            color: #3f3f3f;
         }
 
 
@@ -142,7 +145,7 @@
             max-width: 1050px;
             margin: 0;
 
-            font-size: clamp(3.3rem, 6.4vw, 6.5rem);
+            font-size: clamp(3.3rem, 6.4vw, 6.4rem);
             font-weight: 500;
 
             line-height: 0.98;
@@ -160,18 +163,40 @@
 
 
         /* ==================================================
-           BLOG GALLERY
+           BLOG GRID
         ================================================== */
 
         .blog-gallery {
-            max-width: 1250px;
-
+            max-width: 1220px;
             margin: 0 auto;
-            padding: 80px 30px 120px;
+            padding: 70px 30px 120px;
         }
 
 
+        .blog-row {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 55px;
+
+            align-items: start;
+
+            margin-bottom: 85px;
+        }
+
+
+        .blog-row.reverse {
+            grid-template-columns: 0.85fr 1.15fr;
+        }
+
+
+
+        /* ==================================================
+           BLOG POSTS
+        ================================================== */
+
         .blog-post {
+            width: 100%;
+            margin: 0;
             position: relative;
         }
 
@@ -186,7 +211,7 @@
 
 
         /* ==================================================
-           BLOG IMAGES
+           POST IMAGES
         ================================================== */
 
         .post-image {
@@ -217,9 +242,24 @@
         }
 
 
+        .post-one .post-image {
+            aspect-ratio: 16 / 10;
+        }
+
+
+        .post-two .post-image {
+            aspect-ratio: 4 / 5;
+        }
+
+
+        .post-three .post-image {
+            aspect-ratio: 5 / 4;
+        }
+
+
 
         /* ==================================================
-           BLOG POST TEXT
+           POST TEXT
         ================================================== */
 
         .post-info {
@@ -242,13 +282,12 @@
 
         .post-title {
             max-width: 760px;
-
             margin: 0;
 
-            font-size: clamp(1.55rem, 2.5vw, 2.65rem);
+            font-size: clamp(1.5rem, 2.25vw, 2.5rem);
             font-weight: 500;
 
-            line-height: 1.04;
+            line-height: 1.05;
             letter-spacing: -0.04em;
 
             transition: transform 0.3s ease;
@@ -256,16 +295,16 @@
 
 
         .blog-post:hover .post-title {
-            transform: translateX(7px);
+            transform: translateX(6px);
         }
 
 
         .post-description {
             max-width: 520px;
 
-            margin-top: 14px;
+            margin-top: 13px;
 
-            font-size: 0.86rem;
+            font-size: 0.85rem;
             font-weight: 300;
 
             line-height: 1.8;
@@ -285,63 +324,6 @@
 
         .blog-post:hover .post-arrow {
             transform: translate(5px, -5px);
-        }
-
-
-
-        /* ==================================================
-           POST 1
-        ================================================== */
-
-        .post-one {
-            width: 62%;
-
-            margin-bottom: 55px;
-        }
-
-
-        .post-one .post-image {
-            aspect-ratio: 16 / 9;
-        }
-
-
-
-        /* ==================================================
-           POST 2
-        ================================================== */
-
-        .post-two {
-            width: 40%;
-
-            margin-left: auto;
-            margin-right: 10%;
-
-            margin-bottom: 55px;
-        }
-
-
-        .post-two .post-image {
-            aspect-ratio: 4 / 5;
-        }
-
-
-
-        /* ==================================================
-           POST 3
-        ================================================== */
-
-        .post-three {
-            width: 50%;
-
-            margin-left: 8%;
-
-            margin-top: 0;
-            margin-bottom: 55px;
-        }
-
-
-        .post-three .post-image {
-            aspect-ratio: 5 / 4;
         }
 
 
@@ -385,97 +367,103 @@
 
 
         /* ==================================================
-           RANDOM THOUGHTS
+           THOUGHT CARDS
         ================================================== */
 
-        .thought {
+        .thought-card {
             position: relative;
 
-            max-width: 850px;
+            min-height: 100%;
 
-            margin: 75px auto 90px;
-            padding: 28px 20px;
+            display: flex;
+            align-items: center;
 
-            text-align: center;
+            padding: 42px 40px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
         }
 
 
-        .thought p {
+        .thought-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 38px rgba(0,0,0,0.08);
+        }
+
+
+        .thought-card p {
+            position: relative;
+            z-index: 2;
+
             margin: 0;
 
-            font-size: clamp(1.55rem, 2.8vw, 2.7rem);
+            font-size: clamp(1.3rem, 2.05vw, 2rem);
             font-weight: 300;
 
-            line-height: 1.38;
+            line-height: 1.45;
             letter-spacing: -0.025em;
-
-            color: #252525;
         }
 
 
-        .thought::before {
-            content: "";
-
-            display: block;
-
-            width: 32px;
-            height: 1px;
-
-            margin: 0 auto 25px;
-
-            background: #aaa;
-        }
-
-
-        .thought-left {
-            max-width: 720px;
-
-            margin-left: 5%;
-            margin-right: auto;
-
-            text-align: left;
-        }
-
-
-        .thought-left::before {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-
-        .thought-right {
-            max-width: 760px;
-
-            margin-left: auto;
-            margin-right: 6%;
-
-            text-align: right;
-        }
-
-
-        .thought-right::before {
-            margin-left: auto;
-            margin-right: 0;
-        }
-
-
-        .thought em {
+        .thought-card em {
             font-style: italic;
         }
 
 
-        .thought-note {
-            display: block;
+        .thought-number {
+            position: absolute;
 
-            margin-top: 18px;
+            top: 18px;
+            right: 20px;
 
-            font-size: 0.62rem;
+            font-size: 0.60rem;
             font-weight: 500;
 
-            letter-spacing: 0.17em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
 
-            color: var(--blog-muted);
+            opacity: 0.55;
+        }
+
+
+        .thought-one {
+            background: var(--lotus-green);
+            color: #ffffff;
+        }
+
+
+        .thought-two {
+            background: var(--lotus-pink);
+            color: #ffffff;
+        }
+
+
+        .thought-three {
+            background: var(--lotus-teal);
+            color: #ffffff;
+        }
+
+
+        .thought-card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 85px;
+            height: 85px;
+
+            right: -40px;
+            bottom: -40px;
+
+            border: 1px solid currentColor;
+            border-radius: 50%;
+
+            opacity: 0.13;
         }
 
 
@@ -487,7 +475,7 @@
         .reveal {
             opacity: 0;
 
-            transform: translateY(25px);
+            transform: translateY(24px);
 
             transition:
                 opacity 0.8s ease,
@@ -510,7 +498,7 @@
         .blog-end {
             max-width: 1180px;
 
-            margin: 80px auto 0;
+            margin: 70px auto 0;
             padding-top: 22px;
 
             border-top: 1px solid var(--blog-line);
@@ -533,16 +521,24 @@
         @media (max-width: 850px) {
 
             .blog-intro {
-                min-height: 370px;
+                min-height: 360px;
 
-                padding: 45px 20px 50px;
+                padding:
+                    45px
+                    20px
+                    50px;
 
                 background-position: center;
             }
 
 
             .blog-intro h1 {
-                font-size: clamp(3rem, 12vw, 5.4rem);
+                font-size:
+                    clamp(
+                        3rem,
+                        12vw,
+                        5.4rem
+                    );
             }
 
 
@@ -552,17 +548,18 @@
 
 
             .blog-gallery {
-                padding: 60px 20px 85px;
+                padding:
+                    55px
+                    20px
+                    85px;
             }
 
 
-            .post-one,
-            .post-two,
-            .post-three {
-                width: 100%;
+            .blog-row,
+            .blog-row.reverse {
+                grid-template-columns: 1fr;
 
-                margin-left: 0;
-                margin-right: 0;
+                gap: 35px;
 
                 margin-bottom: 65px;
             }
@@ -576,32 +573,26 @@
 
 
             .post-title {
-                font-size: 2.2rem;
+                font-size: 2.1rem;
             }
 
 
-            .thought,
-            .thought-left,
-            .thought-right {
-                max-width: 100%;
+            .thought-card {
+                min-height: 220px;
 
-                margin: 55px 0 70px;
-                padding: 18px 0;
-
-                text-align: left;
+                padding:
+                    35px
+                    30px;
             }
 
 
-            .thought::before,
-            .thought-left::before,
-            .thought-right::before {
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-
-            .thought p {
-                font-size: clamp(1.45rem, 6vw, 2.1rem);
+            .thought-card p {
+                font-size:
+                    clamp(
+                        1.35rem,
+                        6vw,
+                        2rem
+                    );
             }
 
         }
@@ -609,6 +600,7 @@
     </style>
 
 </head>
+
 
 
 <body>
@@ -620,7 +612,9 @@
 
     <header class="top-nav">
 
-        <a href="index.html#home" class="nav-brand">
+        <a
+            href="index.html#home"
+            class="nav-brand">
 
             <img
                 src="./images/profile_2.jpg"
@@ -660,7 +654,9 @@
                 Resources
             </a>
 
-            <a href="blog.html" class="active">
+            <a
+                href="blog.html"
+                class="active">
                 Blog
             </a>
 
@@ -710,229 +706,262 @@
     <main class="blog-gallery">
 
 
-        <!-- ==========================================
-             POST 1
-        =========================================== -->
+        <!-- ==================================================
+             ROW 1
+             POST 1 + THOUGHT 1
+        ================================================== -->
 
-        <article class="blog-post post-one reveal">
-
-            <a href="blog-growing-older.html">
-
-
-                <div class="post-image">
-
-                    <img
-                        src="images/blog1.jpg"
-                        alt="Reflection on growing older">
+        <section class="blog-row">
 
 
-                    <span class="open-label">
-                        Open Essay ↗
-                    </span>
+            <article
+                class="blog-post post-one reveal">
 
-                </div>
+                <a href="blog-growing-older.html">
 
 
-                <div class="post-info">
+                    <div class="post-image">
 
-                    <div class="post-meta">
-                        Essay · Reflection
+                        <img
+                            src="images/blog1.jpg"
+                            alt="Reflection on growing older">
+
+
+                        <span class="open-label">
+                            Open Essay ↗
+                        </span>
+
                     </div>
 
 
-                    <h2 class="post-title">
 
-                        Self reflection a week before I turn
-                        a quarter of a century old
+                    <div class="post-info">
 
-                        <span class="post-arrow">
-                            ↗
-                        </span>
-
-                    </h2>
+                        <div class="post-meta">
+                            Essay · Reflection
+                        </div>
 
 
-                    <p class="post-description">
+                        <h2 class="post-title">
 
-                        A reflection on loss, resilience,
-                        and the quieter optimism that emerges
-                        with experience.
+                            Self reflection a week before I turn
+                            a quarter of a century old
 
-                    </p>
+                            <span class="post-arrow">
+                                ↗
+                            </span>
 
-                </div>
-
-            </a>
-
-        </article>
+                        </h2>
 
 
+                        <p class="post-description">
 
-        <!-- ==========================================
-             THOUGHT 1
-        =========================================== -->
+                            A reflection on loss, resilience,
+                            and the quieter optimism that emerges
+                            with experience.
 
-        <aside class="thought thought-right reveal">
+                        </p>
 
-            <p>
-                “I feel both restless and listless and everything
-                in between — like something in me is vibrating
-                with nowhere to go.”
-            </p>
-
-        </aside>
-
-
-
-        <!-- ==========================================
-             POST 2
-        =========================================== -->
-
-        <article class="blog-post post-two reveal">
-
-            <a href="blog-creative-fear.html">
-
-
-                <div class="post-image">
-
-                    <img
-                        src="images/shelved.png"
-                        alt="How do we grow up without disappearing?">
-
-
-                    <span class="open-label">
-                        Open Poem ↗
-                    </span>
-
-                </div>
-
-
-                <div class="post-info">
-
-                    <div class="post-meta">
-                        Poetry · Adulthood
                     </div>
 
 
-                    <h2 class="post-title">
+                </a>
 
-                        How do we grow up
-                        without disappearing?
+            </article>
 
-                        <span class="post-arrow">
-                            ↗
+
+
+            <aside
+                class="thought-card thought-one reveal">
+
+                <span class="thought-number">
+                    Thought / 01
+                </span>
+
+
+                <p>
+                    I feel both restless and listless and everything
+                    in between — like something in me is vibrating
+                    with nowhere to go.
+                </p>
+
+            </aside>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ROW 2
+             THOUGHT 2 + POST 2
+        ================================================== -->
+
+        <section class="blog-row reverse">
+
+
+            <aside
+                class="thought-card thought-two reveal">
+
+                <span class="thought-number">
+                    Thought / 02
+                </span>
+
+
+                <p>
+                    Sadness demands explanation.
+                    Happiness simply asks to be lived.
+                </p>
+
+            </aside>
+
+
+
+            <article
+                class="blog-post post-two reveal">
+
+                <a href="blog-creative-fear.html">
+
+
+                    <div class="post-image">
+
+                        <img
+                            src="images/shelved.png"
+                            alt="How do we grow up without disappearing?">
+
+
+                        <span class="open-label">
+                            Open Poem ↗
                         </span>
 
-                    </h2>
-
-
-                    <p class="post-description">
-                        A poem on adulthood.
-                    </p>
-
-                </div>
-
-            </a>
-
-        </article>
-
-
-
-        <!-- ==========================================
-             THOUGHT 2
-        =========================================== -->
-
-        <aside class="thought thought-left reveal">
-
-            <p>
-                “Sadness demands explanation.
-                Happiness simply asks to be lived.”
-            </p>
-
-        </aside>
-
-
-
-        <!-- ==========================================
-             POST 3
-        =========================================== -->
-
-        <article class="blog-post post-three reveal">
-
-            <a href="blog-color.html">
-
-
-                <div class="post-image">
-
-                    <img
-                        src="images/blog-color.png"
-                        alt="A 21st century girl's take on color">
-
-
-                    <span class="open-label">
-                        Open Essay ↗
-                    </span>
-
-                </div>
-
-
-                <div class="post-info">
-
-                    <div class="post-meta">
-                        Essay · Culture
                     </div>
 
 
-                    <h2 class="post-title">
 
-                        A 21st century girl’s take on color
+                    <div class="post-info">
 
-                        <span class="post-arrow">
-                            ↗
+                        <div class="post-meta">
+                            Poetry · Adulthood
+                        </div>
+
+
+                        <h2 class="post-title">
+
+                            How do we grow up
+                            without disappearing?
+
+                            <span class="post-arrow">
+                                ↗
+                            </span>
+
+                        </h2>
+
+
+                        <p class="post-description">
+                            A poem on adulthood.
+                        </p>
+
+                    </div>
+
+
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ROW 3
+             POST 3 + THOUGHT 3
+        ================================================== -->
+
+        <section class="blog-row">
+
+
+            <article
+                class="blog-post post-three reveal">
+
+                <a href="blog-color.html">
+
+
+                    <div class="post-image">
+
+                        <img
+                            src="images/blog-color.png"
+                            alt="A 21st century girl's take on color">
+
+
+                        <span class="open-label">
+                            Open Essay ↗
                         </span>
 
-                    </h2>
-
-
-                    <p class="post-description">
-                        The strange way color preference becomes powerful.
-                    </p>
-
-                </div>
-
-            </a>
-
-        </article>
+                    </div>
 
 
 
-        <!-- ==========================================
-             THOUGHT 3
-        =========================================== -->
+                    <div class="post-info">
 
-        <aside class="thought thought-right reveal">
-
-            <p>
-                “<em>Mann vasanai.</em>
-                The richness of the soil; the connections
-                to my culture, tradition, ancestors.”
-            </p>
-
-            <span class="thought-note">
-                A thought on belonging
-            </span>
-
-        </aside>
+                        <div class="post-meta">
+                            Essay · Culture
+                        </div>
 
 
+                        <h2 class="post-title">
 
-        <!-- ==========================================
+                            A 21st century girl’s take on color
+
+                            <span class="post-arrow">
+                                ↗
+                            </span>
+
+                        </h2>
+
+
+                        <p class="post-description">
+                            The strange way color preference becomes powerful.
+                        </p>
+
+                    </div>
+
+
+                </a>
+
+            </article>
+
+
+
+            <aside
+                class="thought-card thought-three reveal">
+
+                <span class="thought-number">
+                    Thought / 03
+                </span>
+
+
+                <p>
+                    <em>Mann vasanai.</em>
+                    The richness of the soil; the connections
+                    to my culture, tradition, ancestors.
+                </p>
+
+            </aside>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
              END
-        =========================================== -->
+        ================================================== -->
 
         <div class="blog-end reveal">
             More to come.
         </div>
+
 
     </main>
 
@@ -942,7 +971,9 @@
          CONTACT
     ================================================== -->
 
-    <section class="contact" id="contact">
+    <section
+        class="contact"
+        id="contact">
 
         <div class="container">
 
@@ -954,7 +985,9 @@
 
                         <h2>
                             Have questions?
-                            Feel free to <span>Email</span> Me
+                            Feel free to
+                            <span>Email</span>
+                            Me
                         </h2>
 
 
@@ -992,7 +1025,8 @@
                 <div class="col-lg-6">
 
                     <h6>
-                        Swetha Sankar © 2026. All Rights Reserved
+                        © 2026 Swetha Sankar.
+                        All rights reserved.
                     </h6>
 
                 </div>
@@ -1032,7 +1066,6 @@
 
 
     <!-- Bootstrap -->
-
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
     </script>
@@ -1058,9 +1091,15 @@
 
                         if (entry.isIntersecting) {
 
-                            entry.target.classList.add("visible");
+                            entry.target
+                                .classList
+                                .add("visible");
 
-                            observer.unobserve(entry.target);
+
+                            observer
+                                .unobserve(
+                                    entry.target
+                                );
 
                         }
 
