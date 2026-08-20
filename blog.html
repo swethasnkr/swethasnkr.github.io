@@ -76,31 +76,36 @@
         ================================================== */
 
         .blog-intro {
-            position: relative;
+    position: relative;
 
-            width: 100%;
-            min-height: 420px;
+    width: 100%;
+    min-height: 500px;
 
-            margin: 0;
-            padding: 55px 7vw 60px;
+    margin: 0;
+    padding: 60px 7vw 70px;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-            background-image:
-                linear-gradient(
-                    rgba(255,255,255,0.38),
-                    rgba(255,255,255,0.38)
-                ),
-                url("images/snow_bottle.png");
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.38),
+            rgba(255,255,255,0.38)
+        ),
+        url("images/snow_bottle.png");
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+    /* zoomed out slightly */
+    background-size: 90% auto;
 
-            overflow: hidden;
-        }
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* fills any exposed area around the image */
+    background-color: #f6f6f4;
+
+    overflow: hidden;
+}
 
 
         .blog-intro::after {
@@ -774,9 +779,7 @@
             <aside
                 class="thought-card thought-one reveal">
 
-                <span class="thought-number">
-                    Thought / 01
-                </span>
+                
 
 
                 <p>
@@ -803,9 +806,7 @@
             <aside
                 class="thought-card thought-two reveal">
 
-                <span class="thought-number">
-                    Thought / 02
-                </span>
+                
 
 
                 <p>
@@ -936,9 +937,7 @@
             <aside
                 class="thought-card thought-three reveal">
 
-                <span class="thought-number">
-                    Thought / 03
-                </span>
+                
 
 
                 <p>
